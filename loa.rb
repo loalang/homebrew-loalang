@@ -2,7 +2,7 @@ class Loa < Formula
   desc "Loa Programming Language Compiler Toolchain"
   homepage "https://loalang.xyz"
   
-  version "0.0.2"
+  version "0.1.1"
   if OS.mac?
     url "https://storage.googleapis.com/loalang-releases/0.1.1_x86_64-macos.tar.gz"
     sha256 "7212d217a8fdab5bfb96199db0772a65931b25ed5a11a1f7121dc3ee32e20a40"
