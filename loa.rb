@@ -4,8 +4,8 @@ class Loa < Formula
   
   version "0.0.1"
   if Hardware::CPU.is_64_bit?
-    url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.6.1/sdk/dartsdk-macos-x64-release.zip"
-    sha256 "3063a3151e91367fff95f63c781519a54674cc5e8b9bc847e2c6de96ed611a14"
+    url "https://storage.googleapis.com/loalang-releases/loa-0.0.1.zip"
+    sha256 "a839976656c660456446b47cc3e0a71085b6ed781a9e553219c44bfdf471b198"
   else
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.6.1/sdk/dartsdk-macos-ia32-release.zip"
     sha256 "161122c60c89db5049a7617630d7a492cdb6bb2e73b23daf49a16bd9e2c0c52d"
