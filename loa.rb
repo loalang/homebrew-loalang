@@ -3,12 +3,12 @@ class Loa < Formula
   homepage "https://loalang.xyz"
   
   version "0.0.2"
-  if Hardware::CPU.is_64_bit?
-    url "https://storage.googleapis.com/loalang-releases/loa-0.0.4.zip"
-    sha256 "aa1ae3047fbe23fd8c75fc0860cb57f1ad90bac8546d58030d2900e20f0e0e84"
+  if OS.mac?
+    url "https://storage.googleapis.com/loalang-releases/0.1.0_x86_64-macos.tar.gz"
+    sha256 "3896df9eeaf9f7ab7219f92bc8295adbd55559c417cc9462f1f7de64bbf1cfc4"
   else
-    url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.6.1/sdk/dartsdk-macos-ia32-release.zip"
-    sha256 "161122c60c89db5049a7617630d7a492cdb6bb2e73b23daf49a16bd9e2c0c52d"
+    url "https://storage.googleapis.com/loalang-releases/0.1.0_x86_64-linux.tar.gz"
+    sha256 "ace3e0828c93a08a70e09458d6259a148c747c633857c1216e23bdad3d2e1455"
   end
   
   def install
