@@ -2,9 +2,9 @@ class Loa < Formula
   desc "Loa Programming Language Compiler Toolchain"
   homepage "https://loalang.xyz"
   
-  version "0.0.1"
+  version "0.0.2"
   if Hardware::CPU.is_64_bit?
-    url "https://storage.googleapis.com/loalang-releases/loa-0.0.1.zip"
+    url "https://storage.googleapis.com/loalang-releases/loa-0.0.2.zip"
     sha256 "7999c5b9ab84ee79f7fe7478be23722fdd38d5324745c861eb67c01f19444776"
   else
     url "https://storage.googleapis.com/dart-archive/channels/stable/release/2.6.1/sdk/dartsdk-macos-ia32-release.zip"
