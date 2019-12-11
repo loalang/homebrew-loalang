@@ -13,9 +13,9 @@ class Loa < Formula
   
   def install
     bin.mkpath
-    bin.install "loa"
-    bin.install "loavm"
+    bin.install "bin/loa"
+    bin.install "bin/loavm"
     lib.mkpath
-    lib.install "std"
+    lib.install "lib/std"
   end
 end
