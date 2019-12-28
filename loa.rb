@@ -4,11 +4,11 @@ class Loa < Formula
   
   version "0.1.4"
   if OS.mac?
-    url "https://storage.googleapis.com/loalang-releases/#{version}_x86_64-macos.tar.gz"
-    sha256 "173563ef57eca12fce4c3ba113b10704ac93693a38f5a76cb97819ab5b6db192"
+    url "https://cdn.loalang.xyz/#{version}_x86_64-macos.tar.gz"
+    sha256 "0801e5eb542a2bd11d93dfa10ba8b4896de59874b37dfe5f0f4395ecc24a5d03"
   else
-    url "https://storage.googleapis.com/loalang-releases/#{version}_x86_64-linux.tar.gz"
-    sha256 "23495d9a6417be78fa43c665fcfbb9f7dac3721ebeec870386aa3f75cddf8137"
+    url "https://cdn.loalang.xyz/#{version}_x86_64-linux.tar.gz"
+    sha256 "cd96779f3832952c93ffddc65571a5c0f2544f70a5cad4ac8f54a19dcd6083d7"
   end
   
   def install
