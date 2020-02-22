@@ -2,13 +2,13 @@ class Loa < Formula
   desc "Loa Programming Language Compiler Toolchain"
   homepage "https://loalang.xyz"
 
-  version "0.1.9"
+  version "0.1.11"
   if OS.mac?
     url "https://cdn.loalang.xyz/#{version}_x86_64-macos.tar.gz"
-    sha256 "8c20057daf9673a9bb9c49cc52fc134f6ba43f01ab2fb8d16be883362ffafb87"
+    sha256 "a0a0f1202abf22f1fe079cd94da8b586f4cd9c1fc43a23c0573d0631ed4af2e7"
   else
     url "https://cdn.loalang.xyz/#{version}_x86_64-linux.tar.gz"
-    sha256 "f18cb0e74c7129b30e7d59b44729d4a98133567027599e72c83870ce045a5585"
+    sha256 "82b12cb99a2e732ec1b32c22a6b18ce289e3058afde72ab574f4b9fa2fcb35d0"
   end
 
   def install
