@@ -1,0 +1,23 @@
+class Loa < Formula
+  desc "Loa Programming Language Compiler Toolchain"
+  homepage "https://loalang.xyz"
+
+  version "${VERSION}"
+  if OS.mac?
+    url "https://cdn.loalang.xyz/#{version}_x86_64-macos.tar.gz"
+    sha256 "${MAC_CHECKSUM}"
+  else
+    url "https://cdn.loalang.xyz/#{version}_x86_64-linux.tar.gz"
+    sha256 "${LINUX_CHECKSUM}"
+  end
+
+  def install
+    bin.install "bin/loa"
+    bin.install "bin/loavm"
+
+    lib.install "lib/loa"
+
+    (var/"log").mkpath
+    (var/"log").install "var/log/loa.log"
+  end
+end
