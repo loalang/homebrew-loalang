@@ -5,10 +5,10 @@ class Loa < Formula
   version "0.1.17"
   if OS.mac?
     url "https://cdn.loalang.xyz/#{version}-x86_64-macos.tar.gz"
-    sha256 "29a8a5ac64ebfa50194d15746d5cc6f9f2e989273bbb021ecf130581ff030a98"
+    sha256 "db553e7a1ec4945db3f16685f2a82e79587132d00f44a9ed30dd1b2ab4c4d4f9"
   else
     url "https://cdn.loalang.xyz/#{version}-x86_64-linux.tar.gz"
-    sha256 "67cd2d20ca50d8bf1e9e9937954ce419168c40b41189dec4e61fa914ef4e2326"
+    sha256 "156b5063fa5f46f3921ba56537b58d39658ea5eb34d404e060b23a741c26c321"
   end
 
   def install
