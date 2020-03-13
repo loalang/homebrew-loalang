@@ -15,10 +15,10 @@ jobs:
         with:
           input: loa.rb.tmpl
           output: loa.rb
-          env:
-            VERSION: ${{ github.event.client_payload.version }}
-            MAC_CHECKSUM: ${{ github.event.client_payload.checksum.mac }}
-            LINUX_CHECKSUM: ${{ github.event.client_payload.checksum.linux }}
+        env:
+          VERSION: ${{ github.event.client_payload.version }}
+          MAC_CHECKSUM: ${{ github.event.client_payload.checksum.mac }}
+          LINUX_CHECKSUM: ${{ github.event.client_payload.checksum.linux }}
 
       - name: Commit
         run: |
