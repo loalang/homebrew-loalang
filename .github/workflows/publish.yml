@@ -1,0 +1,32 @@
+name: Publish
+
+on: [repository_dispatch]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: github.event.action == 'compiler-release'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Render
+        uses: danielr1996/envsubst-action@1.0.0
+        with:
+          input: loa.rb.tmpl
+          output: loa.rb
+          env:
+            VERSION: ${{ github.event.client_payload.version }}
+            MAC_CHECKSUM: ${{ github.event.client_payload.checksum.mac }}
+            LINUX_CHECKSUM: ${{ github.event.client_payload.checksum.linux }}
+
+       - name: Commit
+         run: |
+           git config --local user.name "Publish Workflow"
+           git config --local user.email "cd@loalang.xyz"
+           git commit -am "Publish ${{ github.event.client_payload.version }}"
+
+       - name: Push
+         uses: ad-m/github-push-action@master
+         with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
