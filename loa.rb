@@ -2,22 +2,16 @@ class Loa < Formula
   desc "Loa Programming Language Compiler Toolchain"
   homepage "https://loalang.xyz"
 
-  version "0.1.15"
+  version "0.1.17"
   if OS.mac?
-    url "https://cdn.loalang.xyz/#{version}_x86_64-macos.tar.gz"
-    sha256 "7eef49dd4a3b705809e5f387df25b7868ceb23bd458e2d5b5a9ef8d524f03034"
+    url "https://cdn.loalang.xyz/#{version}-x86_64-macos.tar.gz"
+    sha256 "e686e8fc78a469a4227017f3a490e4e09180dbaf7b1bfef2789d244f0bfe5e40"
   else
-    url "https://cdn.loalang.xyz/#{version}_x86_64-linux.tar.gz"
-    sha256 "24b783a919ff22d5c6214a8cde4e2ea287a533be85d80ca184a9ca4c739001b9"
+    url "https://cdn.loalang.xyz/#{version}-x86_64-linux.tar.gz"
+    sha256 "0e27072c8f569fe47f73cb558602b66418102354c9361618787feb87052d6fe8"
   end
 
   def install
-    bin.install "bin/loa"
-    bin.install "bin/loavm"
-
-    lib.install "lib/loa"
-
-    (var/"log").mkpath
-    (var/"log").install "var/log/loa.log"
+    prefix.install Dir["*"]
   end
 end
